@@ -9,25 +9,27 @@ It then prints the cost per 100 miles and how far the car can go with the gas.
 
 #include <iostream>
 using namespace std;
-
 int main()
 
 {
-cout << "Enter the number of gallons of gas in your tank"<< endl;
-float numgals = 0;
-cin >> numgals;
 
-cout << "Enter the the fuel effiency in miles per gallon" << endl;
-float mpg = 0;
-cin >> mpg;
+double GInTank, FE, GasPrice, HowFar, cost;
 
-cout << "Enter the price of gas per gallon" << endl;
-float gpg = 0;
-cin >> gpg;
+cout<<"Enter the number of gallons of gas in the tank: "<<endl;
+cin>>GInTank;
 
-int mgas = (numgals * mpg) ;
-int cost1 = (100/mpg) * gpg;
-cout << " The cost per 100 miles is " << cost1 << " and farthest it can go is " << mgas << " miles." << endl;
+cout<<"Enter the fuel efficiency in miles per gallon: "<<endl;
+cin>>FE;
+
+cout<<"Enter the price of gas per gallon: "<<endl;
+cin>>GasPrice;
+
+HowFar = GInTank * FE;
+cost = (100 / FE) * GasPrice;
+
+cout<<"The car can go for " << HowFar << " miles with the gas in the car"<<endl;
+
+cout<<"The cost per 100 miles is " << cost << " $"<<endl;
 
 return 0;
 
